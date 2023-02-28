@@ -3,7 +3,7 @@ const { create,emailCheck, getUsers, getUserById, getUserByEmail, updateUserType
         updateVisitorDetails,addVisitorDetails,updateEmployeeDocs, updateStudentDocs, updateVisitorDocs, addAccountCreatedNotificationToUser, deactivateAccount,
         getEmployeeDetailsById, getVisitorDetailsById, getStudentDetailsById, getAllUsers, updateUserRecoveryPassword, sendLinkToEmail, checkIfEmailAndRecoveryPasswordMatched, 
         updateUserPassword, checkIfIdAndPasswordMatched, updateProfileInfoStudent, updateProfileInfoEmployee, updateProfileInfoVisitor} = require("./user.service");
-const {genSaltSync, hashSync, compareSync} = require('bcrypt');
+const {genSaltSync, hashSync, compareSync} = require('bcryptjs');
 const { sign } = require("jsonwebtoken")
 var generator = require('generate-password');
 

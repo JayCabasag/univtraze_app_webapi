@@ -4,7 +4,7 @@ const {emailClinicAdminCheck, createClinicAdmin, getClinicAdminByEmail,
     getTotalResolvedEmergencyReports, getTotalCommunicableDiseaseReportedTodayOngoing, getTotalCommunicableDiseaseReportedTodayResolved, 
     updateNewPassword, checkIfEmailExist, addClinicRecoveryPassword, sendLinkToEmail,checkIfEmailAndRecoveryPasswordMatched, 
     updateClinicCredentials,  checkIfIdAndPasswordMatched} = require("./clinicAdmin.service");
-const {genSaltSync, hashSync, compareSync} = require('bcrypt');
+const {genSaltSync, hashSync, compareSync} = require('bcryptjs');
 const { sign } = require("jsonwebtoken")
 const moment = require('moment')
 var generator = require('generate-password');
