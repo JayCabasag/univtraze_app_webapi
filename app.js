@@ -47,5 +47,5 @@ app.use('/api/files', fileRouter)
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
-    console.log('Server up and Running on Port: ', process.env.PORT)
+    console.log('Server up and Running on Port: ', port)
 })
