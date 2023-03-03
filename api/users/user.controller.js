@@ -563,9 +563,7 @@ module.exports = {
     },
 
     getUserDetailsById: (req, res) => {
-        
-        const id = req.body.id;
-        
+        const id = req.params.id
         getUserById(id, async (err, results) => {
             if(err){
                 console.log(err)

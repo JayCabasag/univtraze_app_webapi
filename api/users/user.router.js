@@ -10,7 +10,7 @@ router.post("/signup", createUser);
 router.get("/", checkToken, getUsers);
 router.get("/getAllUsers", checkToken, getAllUsers);
 router.post("/login", login)
-router.post("/getUserDetailsById",checkToken, getUserDetailsById)
+router.get("/:id",checkToken, getUserDetailsById)
 router.post("/getUserDetailsByIds",checkToken, getUserDetailsByIds)
 router.post("/updateUserType",checkToken, updateUserType)
 router.post("/addStudentDetails",checkToken, addStudentDetails)
