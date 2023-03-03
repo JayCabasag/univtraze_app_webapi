@@ -160,7 +160,7 @@ module.exports = {
     },
     userVisitedRooms: (req, res) => {
         const body = req.body;
-
+        console.log(body)
         userVisitedRooms(body, (err, results ) => {
 
             if(err){
