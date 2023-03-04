@@ -159,10 +159,8 @@ module.exports = {
         })
     },
     userVisitedRooms: (req, res) => {
-        const body = req.body;
-        console.log(body)
-        userVisitedRooms(body, (err, results ) => {
-
+        const id = req.params.id
+        userVisitedRooms({user_id : id}, (err, results ) => {
             if(err){
                 console.log(err)
                 return res.json({

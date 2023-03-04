@@ -7,7 +7,7 @@ router.get("/allRooms", checkToken, getAllRooms)
 router.post("/visited-room", checkToken, addVisitedRoom)
 router.post("/searchRoom", checkToken, searchRoomNumber)
 router.post("/searchUsersByRoomId", checkToken, searchUsersByRoomId)
-router.post("/userVisitedRooms", checkToken, userVisitedRooms)
+router.get("/visited-rooms/:id", checkToken, userVisitedRooms)
 router.get("/temperature-history/:id", checkToken, userTemperatureHistory)
 router.get("/user-temperature/:id", checkToken, userTodaysTemperature)
 
