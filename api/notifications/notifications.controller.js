@@ -161,9 +161,16 @@ module.exports = {
         })
     },
     getUserNotificationsById: (req, res) => {
-        const id = req.params.id
-        const body = req.body
-        const start_at = body["start-at"]
+        const params = req.params
+        const id = params["id"]
+        const start_at = Number(req.query["start-at"]) ?? 0
+
+        if(id === undefined || id === ''){
+            return res.status(400).json({
+                success: 0,
+                message: 'Missing required parameters'
+            })
+        }
 
         getUserNotificationsById({ user_id: id, start_at: start_at}, (err, results) => {
             if(err){
