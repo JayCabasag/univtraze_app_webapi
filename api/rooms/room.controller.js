@@ -201,10 +201,11 @@ module.exports = {
     },
 
     userTodaysTemperature: (req, res) => {
-        
-        const body = req.body;
+        const id = req.params.id
+        let initialDateToday = new Date();
+		let finalDateToday = moment(initialDateToday).format('YYYY-MM-DD')
 
-        userTodaysTemperature(body, (err, results ) => {
+        userTodaysTemperature({user_id: id, dateToday: finalDateToday}, (err, results ) => {
             if(err){
                 console.log(err)
                 return res.json({

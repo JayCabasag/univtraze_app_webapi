@@ -4,12 +4,12 @@ const { checkToken } = require("../../auth/token_validator")
 
 router.post("/addRoom", checkToken, addRoom)
 router.get("/allRooms", checkToken, getAllRooms)
-router.post("/addVisitedRoom", checkToken, addVisitedRoom)
+router.post("/visited-room", checkToken, addVisitedRoom)
 router.post("/searchRoom", checkToken, searchRoomNumber)
 router.post("/searchUsersByRoomId", checkToken, searchUsersByRoomId)
 router.post("/userVisitedRooms", checkToken, userVisitedRooms)
 router.get("/temperature-history/:id", checkToken, userTemperatureHistory)
-router.post("/userTodaysTemperature", checkToken, userTodaysTemperature)
+router.get("/user-temperature/:id", checkToken, userTodaysTemperature)
 
 searchUsersByRoomId
 // router.post("/addUserNotification", checkToken, addUserNotification)
