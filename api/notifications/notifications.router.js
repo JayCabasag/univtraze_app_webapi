@@ -12,7 +12,7 @@ router.get("/getTotalActiveClinicNotifications", checkToken, getTotalActiveClini
 router.post("/updateClinicNotificationStatus", checkToken, updateClinicNotificationsStatus)
 router.post("/sendEmergencyReportPrescription", checkToken, sendEmergencyReportPrescriptionViaEmail)
 router.post("/sendCommunicableDiseaseReportPrescription", checkToken, sendSendCommunicableDiseaseReportPrescriptionViaEmail)
-router.post("/getUserNotificationsById", checkToken,  getUserNotificationsById)
+router.get("/user-notifications/:id", checkToken,  getUserNotificationsById)
 router.post("/getTotalActiveUserNotifications", checkToken, getTotalActiveUserNotifications)
 router.post("/updateUserNotificationStatus", checkToken,  updateUserNotificationStatus)
 router.get("/getUnivtrazeDataForLanding",  getUnivtrazeDataForLanding)

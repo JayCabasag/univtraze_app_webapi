@@ -161,23 +161,22 @@ module.exports = {
         })
     },
     getUserNotificationsById: (req, res) => {
+        const id = req.params.id
         const body = req.body
+        const start_at = body["start-at"]
 
-        getUserNotificationsById(body, (err, results) => {
+        getUserNotificationsById({ user_id: id, start_at: start_at}, (err, results) => {
             if(err){
-                return res.json({
+                return res.status(500).json({
                     success: 0,
                     message: 'Database connection error'
                 })
                 
             }
-            
-            return res.json({
+            return res.status(200).json({
                 success: 1,
                 results: results
             })
-
-
         })
     },
     getTotalActiveUserNotifications: (req, res) => {
